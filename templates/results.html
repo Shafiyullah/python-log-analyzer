@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        {% if results %}
+            <p><strong>File Analyzed:</strong> {{ filename }}</p>
+            <p><strong>Total Lines:</strong> {{ results.total_lines }}</p>
+            <p><strong>Error Lines Found:</strong> {{ results.error_count }}</p>
+
+            {% if results.error_lines %}
+                <h2>Error Lines:</h2>
+                <ul>
+                    {% for line in results.error_lines %}
+                        <li>{{ line }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No error lines found.</p>
+            {% endif %}
+
+            {% if results.error %}
+                <p class="error-message">Error during analysis: {{ results.error }}</p>
+            {% endif %}
+
+        {% else %}
+            <p>No results available. Please upload a log file from the <a href="{{ url_for('index') }}">home page</a>.</p>
+        {% endif %}
+
+        <p><a href="{{ url_for('index') }}">Analyze another file</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_plugins/
+
+# Editors and IDEs
+.vscode/        # VS Code
+.idea/          # JetBrains IDEs
+*.swp           # Vim
+*.swo           # Vim
+*~              # Emacs
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Specific to your Flask project
+uploads/ # Directory for uploaded files
+
+# Add any other files you want to ignore here
+# e.g. config files with secrets:
+# config.ini
+# settings.py # Be careful!
