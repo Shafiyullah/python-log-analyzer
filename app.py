@@ -42,8 +42,8 @@ def analyze():
         session['analysis_results'] = analysis_results
         session['analyzed_filename'] = filename
 
-        # Clean up the uploaded file after analysis (optional but recommended)
-        # os.remove(filepath)
+        # Clean up the uploaded file after analysis
+        os.remove(filepath)
 
         return redirect(url_for('results'))
 
@@ -61,4 +61,4 @@ def results():
 
 if __name__ == '__main__':
     # Run the Flask development server
-    app.run(debug=True)
+    app.run(debug=False)
