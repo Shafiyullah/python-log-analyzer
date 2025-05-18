@@ -48,11 +48,15 @@ venv/
 env/
 .env/
 ENV/
+.cfg
+
 
 # Specific to your Flask project
 uploads/ # Directory for uploaded files
+.log
+.txt
 
 # Add any other files you want to ignore here
 # e.g. config files with secrets:
-# config.ini
+config.ini
 # settings.py # Be careful!
