@@ -56,7 +56,8 @@ uploads/ # Directory for uploaded files
 .log
 .txt
 flask/
-Lib/
+Lib
+Lib/site-packages/
 Scripts/
 
 # Add any other files you want to ignore here
