@@ -43,16 +43,18 @@ def analyze_log_file(file_path):
 # Example of how you might use this function directly (optional)
 if __name__ == "__main__":
     # You can uncomment this to test the parser directly
-    # current_dir = os.path.dirname(os.path.abspath(__file__))
-    # sample_log_path = os.path.join(current_dir, 'sample.log')
-    # analysis_results = analyze_log_file(sample_log_path)
-    # if analysis_results.get('error'):
-    #     print(f"Error: {analysis_results['error']}")
-    # else:
-    #     print("Log Analysis Summary:")
-    #     print(f"Total lines: {analysis_results['total_lines']}")
-    #     print(f"Error lines found: {analysis_results['error_count']}")
-    #     print("Error lines:")
-    #     for line in analysis_results['error_lines']:
-    #         print(f"- {line}")
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    sample_log_path = os.path.join(current_dir, 'sample.log')
+    analysis_results = analyze_log_file(sample_log_path)
+    
+    if analysis_results.get('error'):
+         print(f"Error: {analysis_results['error']}")
+    else:
+         print("Log Analysis Summary:")
+         print(f"Total lines: {analysis_results['total_lines']}")
+         print(f"Error lines found: {analysis_results['error_count']}")
+         print("Error lines:")
+        
+         for line in analysis_results['error_lines']:
+             print(f"- {line}")
     pass # Keep this pass if you want to primarily use it with Flask
